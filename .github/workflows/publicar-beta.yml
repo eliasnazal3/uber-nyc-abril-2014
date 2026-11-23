@@ -1,0 +1,28 @@
+name: Publicar la beta del Hito 1
+on:
+  push:
+    branches: [publicar-hito1]
+    paths: ['.github/workflows/publicar-beta.yml']
+
+permissions:
+  contents: write
+
+jobs:
+  publicar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Publicar v2.1.0-beta en el commit verificado de main
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          COMMIT_BETA: a2c9fc181ef3250fa2c1fcc9a62351e63f4861c1
+        run: |
+          if gh release view v2.1.0-beta >/dev/null 2>&1; then
+            exit 0
+          fi
+          gh release create v2.1.0-beta \
+            --target "$COMMIT_BETA" \
+            --title 'Hito 1 · Beta 2.1.0' \
+            --notes 'Dashboard de las recogidas de Uber en Nueva York durante abril de 2014. Incluye el CSV completo, tres filtros globales, cuatro indicadores y cinco visualizaciones interactivas, entre ellas los mapas de puntos y densidad.' \
+            --prerelease

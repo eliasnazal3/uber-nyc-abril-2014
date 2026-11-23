@@ -6,7 +6,7 @@ Dashboard del Hito 1 de Visualización de la Información. Beta 2.1.0, abril de 
 Pensado para analistas de movilidad que quieren comparar la actividad registrada por base, fecha y hora. El archivo describe puntos de recogida. Para identificar el destino o reconstruir un trayecto harían falta otros datos.
 
 **Integrantes.** Joaquín Domke, Renato Friz y Elías Nazal.  
-**App pública.** Pendiente de publicar. Al desplegarla, sustituir esta frase por el enlace HTTPS real que termina en `.streamlit.app`.
+**App pública.** [Abrir el dashboard de Uber en Streamlit](https://eliasnazal3-uber-nyc-abril-2014-app-q0klbv.streamlit.app/)
 
 ![Vista inicial real de la beta con los datos de abril](docs/dashboard.png)
 
@@ -14,7 +14,7 @@ Pensado para analistas de movilidad que quieren comparar la actividad registrada
 
 1. Elige las bases, el periodo de abril y el intervalo horario. Los tres filtros actúan juntos en los indicadores, los gráficos y la tabla.
 2. En **Actividad**, mira la línea diaria, las barras por base y el promedio por día de la semana y hora. Pasa el cursor por un gráfico para ver el valor de la selección.
-3. En **Mapas**, alterna entre los puntos por base y la densidad y prueba el zoom. El fondo inicial incluye los límites de los distritos y las vías principales. El fondo detallado en línea necesita conexión al proveedor de cartografía.
+3. En **Mapas**, alterna entre los puntos por base y la densidad y prueba el zoom. El fondo inicial incluye los límites de los distritos y las vías principales. El fondo detallado en línea necesita conexión al proveedor de cartografía. Para dibujar ambos mapas, el navegador necesita WebGL.
 4. En **Datos y método**, consulta las validaciones del archivo completo y despliega la tabla paginada de las filas filtradas. Una selección sin filas muestra un aviso.
 
 ## Datos y cálculos
